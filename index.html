@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="%BASE_URL%favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>S.B.M. Reazul Karim | Software Engineer</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="S.B.M. Reazul Karim is an enterprise software engineer with 4.5+ years of experience specializing in Java, Spring Boot, Grails, ERP, Oracle 11g, PL/SQL, and reporting solutions at IICT, BUET." />
+    <meta name="keywords" content="S.B.M. Reazul Karim, Software Engineer, Java, Spring Boot, Grails, ERP, Oracle, PL/SQL, Jasper Reports, IICT, BUET, Karnaphuli Gas, KGDCL, Bangladesh" />
+    <meta name="author" content="S.B.M. Reazul Karim" />
+    <link rel="canonical" href="https://reazul94.github.io/reazul-portfolio/" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://reazul94.github.io/reazul-portfolio/" />
+    <meta property="og:title" content="S.B.M. Reazul Karim | Software Engineer" />
+    <meta property="og:description" content="Software Engineer with 4.5+ years of experience developing, enhancing, and supporting enterprise ERP, billing, customer management, VAT, and reporting solutions." />
+    <meta property="og:image" content="https://reazul94.github.io/reazul-portfolio/images/Reaz_Image.jpg" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="S.B.M. Reazul Karim | Software Engineer" />
+    <meta property="twitter:description" content="Software Engineer with 4.5+ years of experience developing, enhancing, and supporting enterprise ERP, billing, customer management, VAT, and reporting solutions." />
+    <meta property="twitter:image" content="https://reazul94.github.io/reazul-portfolio/images/Reaz_Image.jpg" />
+
+    <!-- Google Fonts: Inter, Manrope, Noto Sans Bengali & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Theme & Language Pre-hydration Script (Prevents FOUC) -->
+    <script>
+      (function() {
+        try {
+          var params = new URLSearchParams(window.location.search);
+          var paramTheme = params.get('theme');
+          var savedTheme = (paramTheme && ['light', 'dark', 'system'].indexOf(paramTheme) !== -1)
+            ? paramTheme
+            : (localStorage.getItem('reazul_portfolio_theme') || 'system');
+          
+          var isDark = savedTheme === 'dark' || (savedTheme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+          if (isDark) {
+            document.documentElement.classList.add('dark');
+            document.documentElement.style.colorScheme = 'dark';
+          } else {
+            document.documentElement.classList.remove('dark');
+            document.documentElement.style.colorScheme = 'light';
+          }
+
+          var paramLang = params.get('lang');
+          var savedLang = (paramLang && ['en', 'bn'].indexOf(paramLang) !== -1)
+            ? paramLang
+            : (localStorage.getItem('reazul_portfolio_lang') || 'en');
+          document.documentElement.setAttribute('lang', savedLang);
+        } catch (e) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
+  </head>
+  <body class="bg-canvas text-content-primary antialiased selection:bg-brand/20 selection:text-brand transition-colors duration-200">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
