@@ -1,0 +1,161 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Intentionally Designed Light Theme */
+    --color-canvas: #F8FAFC;
+    --color-canvas-subtle: #F1F5F9;
+    --color-card: #FFFFFF;
+    --color-card-hover: #F8FAFC;
+    --color-content-primary: #0F172A;
+    --color-content-secondary: #475569;
+    --color-content-muted: #64748B;
+    --color-brand: #0284C7;
+    --color-brand-secondary: #2563EB;
+    --color-border-subtle: rgba(15, 23, 42, 0.08);
+    --color-border-highlight: rgba(2, 132, 199, 0.3);
+  }
+
+  .dark {
+    /* Midnight Enterprise Dark Theme */
+    --color-canvas: #080B12;
+    --color-canvas-subtle: #0D111A;
+    --color-card: #111722;
+    --color-card-hover: #151D2A;
+    --color-content-primary: #F3F6FA;
+    --color-content-secondary: #9AA6B2;
+    --color-content-muted: #667085;
+    --color-brand: #38BDF8;
+    --color-brand-secondary: #60A5FA;
+    --color-border-subtle: rgba(255, 255, 255, 0.08);
+    --color-border-highlight: rgba(56, 189, 248, 0.25);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background-color: var(--color-canvas);
+    color: var(--color-content-primary);
+    overflow-x: hidden;
+  }
+
+  /* Accessibility focus ring */
+  :focus-visible {
+    outline: 2px solid var(--color-brand);
+    outline-offset: 2px;
+  }
+
+  /* Bengali Typography Line-Height & Font Optimization */
+  html[lang="bn"] {
+    font-family: 'Noto Sans Bengali', 'Inter', system-ui, sans-serif;
+  }
+
+  html[lang="bn"] body {
+    line-height: 1.7;
+    letter-spacing: 0.01em;
+  }
+}
+
+/* Subtle Technical Grid Background */
+.bg-tech-grid {
+  background-image: 
+    linear-gradient(to right, var(--color-border-subtle) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--color-border-subtle) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* Fine Dotted Pattern */
+.bg-tech-dots {
+  background-image: radial-gradient(var(--color-border-subtle) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-canvas);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-canvas-subtle);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-content-muted);
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ==================================================
+   PRINT STYLESHEET
+   ================================================== */
+@media print {
+  /* Hide non-essential interactive and decorative elements */
+  header,
+  footer,
+  .no-print,
+  #theme-selector,
+  #lang-selector,
+  #mobile-bottom-nav,
+  button[aria-label="Back to top"],
+  [role="progressbar"] {
+    display: none !important;
+  }
+
+  html, body {
+    background: #FFFFFF !important;
+    color: #111827 !important;
+    font-size: 11pt !important;
+    line-height: 1.5 !important;
+  }
+
+  section {
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+    border-bottom: 1px solid #E5E7EB !important;
+    page-break-inside: avoid;
+  }
+
+  article, .card-print {
+    border: 1px solid #E5E7EB !important;
+    background: #FFFFFF !important;
+    color: #111827 !important;
+    box-shadow: none !important;
+    break-inside: avoid;
+    margin-bottom: 1rem !important;
+    padding: 1rem !important;
+  }
+
+  h1, h2, h3, h4 {
+    color: #111827 !important;
+    page-break-after: avoid;
+  }
+
+  p, span, li {
+    color: #374151 !important;
+  }
+
+  /* Show external link destinations on print */
+  a[href^="http"]:after {
+    content: " (" attr(href) ")";
+    font-size: 85%;
+    color: #6B7280;
+  }
+}
