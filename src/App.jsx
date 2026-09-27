@@ -32,6 +32,8 @@ function PortfolioContent() {
     }
   });
 
+  const [isMobileSidebarOpen, setIsMobileSidebarOpen] = useState(false);
+
   const toggleSidebarCollapse = () => {
     setIsSidebarCollapsed((prev) => {
       const next = !prev;
@@ -117,15 +119,21 @@ function PortfolioContent() {
       {/* Reading Progress Indicator */}
       <ScrollProgress />
 
-      {/* Desktop / Tablet IDE-Style Coding Pattern Sidebar */}
+      {/* Desktop & Mobile IDE-Style Coding Pattern Sidebar */}
       <Sidebar
         activeSection={activeSection}
         isCollapsed={isSidebarCollapsed}
         onToggleCollapse={toggleSidebarCollapse}
+        isMobileOpen={isMobileSidebarOpen}
+        onCloseMobile={() => setIsMobileSidebarOpen(false)}
       />
 
       {/* Mobile Top Navigation (Visible on screens < 768px) */}
-      <Navbar activeSection={activeSection} />
+      <Navbar
+        activeSection={activeSection}
+        isMobileOpen={isMobileSidebarOpen}
+        onToggleMobileSidebar={() => setIsMobileSidebarOpen((prev) => !prev)}
+      />
 
       {/* Main Content Wrapper - dynamically accounts for Sidebar width */}
       <div
@@ -151,7 +159,10 @@ function PortfolioContent() {
       </div>
 
       {/* Mobile Bottom Navigation Dock (< 768px) */}
-      <MobileBottomNav activeSection={activeSection} />
+      <MobileBottomNav
+        activeSection={activeSection}
+        onOpenSidebar={() => setIsMobileSidebarOpen(true)}
+      />
 
       {/* Floating Back To Top Button */}
       {showBackToTop && (
