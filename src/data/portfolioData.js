@@ -12,6 +12,8 @@ export const portfolioData = {
     email: "sbmreazul@gmail.com",
     linkedin: "Reazul Karim",
     linkedinUrl: "https://www.linkedin.com/search/results/all/?keywords=S.B.M.%20Reazul%20Karim",
+    github: "Reazul94",
+    githubUrl: "https://github.com/Reazul94",
     currentAffiliation: "Institute of Information and Communication Technology (IICT), BUET",
     resumeUrl: `${cleanBase}documents/S_B_M_Reazul_Karim_CV.pdf`,
     image: `${cleanBase}images/Reaz_Image.jpg`,

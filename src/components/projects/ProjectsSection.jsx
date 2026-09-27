@@ -21,6 +21,27 @@ export default function ProjectsSection() {
     setExpandedCards((prev) => ({ ...prev, [id]: !prev[id] }));
   };
 
+  React.useEffect(() => {
+    const handleSelectProject = (e) => {
+      const { id } = e.detail || {};
+      if (!id) return;
+      setActiveFilter('All');
+      setTimeout(() => {
+        const el = document.getElementById(id);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          el.classList.add('ring-2', 'ring-brand');
+          setTimeout(() => {
+            el.classList.remove('ring-2', 'ring-brand');
+          }, 2000);
+        }
+      }, 100);
+    };
+
+    window.addEventListener('select-project', handleSelectProject);
+    return () => window.removeEventListener('select-project', handleSelectProject);
+  }, []);
+
   const filteredProjects = useMemo(() => {
     if (activeFilter === 'All') return t.projects.items;
     return t.projects.items.filter((p) => p.categories.includes(activeFilter));
@@ -69,7 +90,7 @@ export default function ProjectsSection() {
 
         {/* 1. VISUALLY FEATURED PROJECT: KGDCL ERP System (When 'All' filter active) */}
         {featuredProject && (
-          <div className="mb-12 p-6 sm:p-8 lg:p-10 rounded-2xl bg-card hover:bg-card-hover border border-subtle hover:border-brand/30 transition-all shadow-md group">
+          <div id={featuredProject.id} className="mb-12 p-6 sm:p-8 lg:p-10 rounded-2xl bg-card hover:bg-card-hover border border-subtle hover:border-brand/30 transition-all shadow-md group scroll-mt-24">
             
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
               
@@ -229,7 +250,8 @@ export default function ProjectsSection() {
             return (
               <article
                 key={project.id}
-                className="p-6 rounded-xl bg-card hover:bg-card-hover border border-subtle hover:border-brand/30 transition-all shadow-xs flex flex-col justify-between group"
+                id={project.id}
+                className="p-6 rounded-xl bg-card hover:bg-card-hover border border-subtle hover:border-brand/30 transition-all shadow-xs flex flex-col justify-between group scroll-mt-24"
               >
                 <div>
                   {/* Top Bar: Number, Categories & Client */}

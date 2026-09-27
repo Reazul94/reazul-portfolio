@@ -3,6 +3,7 @@ import { ArrowUp } from 'lucide-react';
 import { ThemeProvider } from './context/ThemeContext';
 import { LanguageProvider } from './context/LanguageContext';
 import ScrollProgress from './components/common/ScrollProgress';
+import Sidebar from './components/sidebar/Sidebar';
 import Navbar from './components/common/Navbar';
 import MobileBottomNav from './components/common/MobileBottomNav';
 import Hero from './components/hero/Hero';
@@ -19,27 +20,92 @@ import Footer from './components/common/Footer';
 function PortfolioContent() {
   const [activeSection, setActiveSection] = useState('hero');
   const [showBackToTop, setShowBackToTop] = useState(false);
+  const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(() => {
+    try {
+      const saved = localStorage.getItem('reazul_sidebar_collapsed');
+      if (saved !== null) {
+        return JSON.parse(saved);
+      }
+      return typeof window !== 'undefined' && window.innerWidth < 1024;
+    } catch {
+      return false;
+    }
+  });
+
+  const toggleSidebarCollapse = () => {
+    setIsSidebarCollapsed((prev) => {
+      const next = !prev;
+      try {
+        localStorage.setItem('reazul_sidebar_collapsed', JSON.stringify(next));
+      } catch (e) {
+        console.warn('Unable to persist sidebar state to localStorage', e);
+      }
+      return next;
+    });
+  };
 
   useEffect(() => {
     const handleScroll = () => {
-      // Toggle back to top visibility
       setShowBackToTop(window.scrollY > 400);
-
-      // Simple active section detection
-      const sections = ['hero', 'about', 'domain', 'experience', 'projects', 'ecosystem', 'skills', 'education', 'contact'];
-      const scrollPosition = window.scrollY + 200;
-
-      for (let i = sections.length - 1; i >= 0; i--) {
-        const el = document.getElementById(sections[i]);
-        if (el && el.offsetTop <= scrollPosition) {
-          setActiveSection(sections[i]);
-          break;
-        }
-      }
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+
+    const sections = [
+      'hero',
+      'about',
+      'domain',
+      'experience',
+      'projects',
+      'ecosystem',
+      'skills',
+      'education',
+      'research',
+      'contact'
+    ];
+
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              setActiveSection(entry.target.id);
+            }
+          });
+        },
+        {
+          rootMargin: '-20% 0px -55% 0px',
+          threshold: 0
+        }
+      );
+
+      sections.forEach((id) => {
+        const el = document.getElementById(id);
+        if (el) observer.observe(el);
+      });
+
+      return () => {
+        observer.disconnect();
+        window.removeEventListener('scroll', handleScroll);
+      };
+    } else {
+      const fallbackScroll = () => {
+        const scrollPosition = window.scrollY + 220;
+        for (let i = sections.length - 1; i >= 0; i--) {
+          const el = document.getElementById(sections[i]);
+          if (el && el.offsetTop <= scrollPosition) {
+            setActiveSection(sections[i]);
+            break;
+          }
+        }
+      };
+
+      window.addEventListener('scroll', fallbackScroll, { passive: true });
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+        window.removeEventListener('scroll', fallbackScroll);
+      };
+    }
   }, []);
 
   const scrollToTop = () => {
@@ -47,30 +113,44 @@ function PortfolioContent() {
   };
 
   return (
-    <div className="min-h-screen w-full max-w-full overflow-x-hidden bg-canvas text-content-primary flex flex-col font-sans selection:bg-brand/20 selection:text-brand transition-colors duration-200">
+    <div className="min-h-screen w-full max-w-full overflow-x-hidden bg-canvas text-content-primary font-sans selection:bg-brand/20 selection:text-brand transition-colors duration-200">
       {/* Reading Progress Indicator */}
       <ScrollProgress />
 
-      {/* Sticky Compressed Navigation */}
+      {/* Desktop / Tablet IDE-Style Coding Pattern Sidebar */}
+      <Sidebar
+        activeSection={activeSection}
+        isCollapsed={isSidebarCollapsed}
+        onToggleCollapse={toggleSidebarCollapse}
+      />
+
+      {/* Mobile Top Navigation (Visible on screens < 768px) */}
       <Navbar activeSection={activeSection} />
 
-      {/* Main Content Sections */}
-      <main className="flex-grow w-full max-w-full pb-16 md:pb-0">
-        <Hero />
-        <AboutSection />
-        <DomainSection />
-        <ExperienceSection />
-        <ProjectsSection />
-        <TechEcosystem />
-        <SkillsSection />
-        <EducationSection />
-        <ContactSection />
-      </main>
+      {/* Main Content Wrapper - dynamically accounts for Sidebar width */}
+      <div
+        className={`w-full max-w-full flex flex-col transition-[padding] duration-300 ease-in-out ${
+          isSidebarCollapsed ? 'md:pl-[72px]' : 'md:pl-[260px]'
+        }`}
+      >
+        {/* Main Content Sections */}
+        <main className="flex-grow w-full max-w-full pb-16 md:pb-0">
+          <Hero />
+          <AboutSection />
+          <DomainSection />
+          <ExperienceSection />
+          <ProjectsSection />
+          <TechEcosystem />
+          <SkillsSection />
+          <EducationSection />
+          <ContactSection />
+        </main>
 
-      {/* Minimal Footer */}
-      <Footer />
+        {/* Minimal Footer */}
+        <Footer />
+      </div>
 
-      {/* Mobile Bottom Navigation Dock */}
+      {/* Mobile Bottom Navigation Dock (< 768px) */}
       <MobileBottomNav activeSection={activeSection} />
 
       {/* Floating Back To Top Button */}

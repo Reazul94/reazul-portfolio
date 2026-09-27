@@ -68,7 +68,7 @@ export default function EducationSection() {
           <div className="lg:col-span-6 space-y-5">
             
             {/* Research / Thesis Section */}
-            <div className="p-6 rounded-xl bg-card border border-subtle shadow-xs">
+            <div id="research" className="p-6 rounded-xl bg-card border border-subtle shadow-xs scroll-mt-24">
               <div className="flex items-center gap-2 mb-3">
                 <BrainCircuit className="w-4 h-4 text-brand" />
                 <span className="text-xs font-mono uppercase tracking-wider text-brand font-semibold">
