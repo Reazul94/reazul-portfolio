@@ -15,7 +15,7 @@ export const portfolioData = {
     github: "Reazul94",
     githubUrl: "https://github.com/Reazul94",
     currentAffiliation: "Institute of Information and Communication Technology (IICT), BUET",
-    resumeUrl: `${cleanBase}documents/S_B_M_Reazul_Karim_CV.pdf`,
+    resumeUrl: `${cleanBase}cv/S_B_M_Reazul_Karim_CV.pdf`,
     image: `${cleanBase}images/Reaz_Image.jpg`,
     summary:
       "Software Engineer with 4.5+ years of experience developing, enhancing, and supporting enterprise ERP, billing, customer-management, and reporting applications. Hands-on experience with Java, Spring Boot, Grails, Hibernate/GORM/JPA, Oracle, PL/SQL, Angular, and reporting technologies. Experienced in translating business and regulatory requirements into application features, database logic, reports, and production deployments, with a strong background in utility ERP systems, billing workflows, VAT/NBR-related solutions, database development, reporting, and production support."
