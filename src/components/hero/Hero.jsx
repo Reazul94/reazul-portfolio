@@ -67,7 +67,7 @@ export default function Hero() {
               {/* Download CV */}
               <a
                 href={personal.resumeUrl}
-                download="S_B_M_Reazul_Karim_CV.pdf"
+                download="SBM_Reazul_Karim_ATS_CV.pdf"
                 className="inline-flex items-center justify-center gap-1.5 px-3.5 sm:px-4 py-2.5 rounded-lg text-xs font-medium text-content-primary bg-card hover:bg-card-hover border border-subtle hover:border-brand/40 transition-colors focus-visible:ring-2 focus-visible:ring-brand shadow-xs text-center min-h-[44px]"
                 title="Download verified CV as PDF"
               >
@@ -126,7 +126,7 @@ export default function Hero() {
                 <div className="relative w-52 sm:w-64 md:w-72 lg:w-80 aspect-[3/4] overflow-hidden rounded-xl bg-canvas-subtle">
                   <img
                     src={personal.image}
-                    alt="S.B.M. Reazul Karim - Enterprise Software Engineer"
+                    alt="S.B.M. Reazul Karim — Software Engineer"
                     className="w-full h-full object-cover object-center filter contrast-[1.02]"
                     loading="eager"
                   />

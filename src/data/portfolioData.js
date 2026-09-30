@@ -344,8 +344,7 @@ export const portfolioData = {
     role: "Undergraduate Thesis / Research",
     institution: "International Islamic University Chittagong",
     points: [
-      "Studied machine-learning approaches for predicting future customer churn.",
-      "Designed a predictive-system concept to identify customers with a higher likelihood of churn and support proactive retention decisions."
+      "Studied machine-learning approaches for predicting customer churn and developed a predictive-system concept for identifying customers with a higher likelihood of churn."
     ]
   },
 
@@ -372,8 +371,10 @@ export const portfolioData = {
       location: "Kumira, Chittagong",
       period: "Jul 2021 - Dec 2021",
       supervisor: "Dr. Jamshed Alam Patwary, Assistant Professor",
+      summary: "Supported academic assessment, laboratory sessions, practical coursework, and student presentations.",
       keySubjects: ["Technical Writing and Presentation", "Mathematical Analysis", "Computer Science"],
       highlights: [
+        "Supported academic assessment, laboratory sessions, practical coursework, and student presentations.",
         "Evaluated examination papers and supported academic assessment activities.",
         "Assisted students during laboratory sessions and helped facilitate practical coursework.",
         "Supervised student presentations during laboratory examinations."

@@ -53,6 +53,32 @@ export const translations = {
       badgeDatabase: "Oracle 11g & PL/SQL",
       badgeOrganizations: "2 Organizations",
     },
+    quickTech: {
+      eyebrow: "QUICK TECHNICAL OVERVIEW",
+      title: "Core Technical Profile",
+      categories: [
+        {
+          id: "backend",
+          name: "BACKEND",
+          skills: ["Java", "Spring Boot", "Spring MVC", "Grails"]
+        },
+        {
+          id: "database",
+          name: "DATABASE",
+          skills: ["Oracle", "PL/SQL", "SQL Server", "T-SQL"]
+        },
+        {
+          id: "enterprise",
+          name: "ENTERPRISE",
+          skills: ["ERP", "Utility Billing", "Customer Management"]
+        },
+        {
+          id: "reporting",
+          name: "REPORTING",
+          skills: ["Jasper Reports", "Jasper Studio", "iReport", "Crystal Reports"]
+        }
+      ]
+    },
     snapshot: {
       title: "Professional Snapshot",
       subtitle: "Verified highlights grounded strictly in enterprise software deliverables",
@@ -179,16 +205,17 @@ export const translations = {
       title: "Enterprise Deployments & Platforms",
       subtitle: "Mission-critical production systems engineered for public utilities and commercial enterprises",
       filterAll: "All",
+      filterJava: "Java",
+      filterSpringBoot: "Spring Boot",
+      filterGrails: "Grails",
       filterErp: "ERP",
-      filterBackend: "Backend",
       filterDatabase: "Database",
       filterReporting: "Reporting",
-      filterWeb: "Web",
       clientLabel: "Client / Organization",
       scopeLabel: "System Scope",
       techLabel: "Technologies & Tools",
       contributionsLabel: "Key Engineering Contributions",
-      viewLive: "Visit Live System",
+      viewLive: "Visit Project",
       productionActive: "Active Production System",
       internalSystem: "Enterprise Internal / On-Premise System",
       archTitle: "Abstract Conceptual Architecture Flow",
@@ -201,7 +228,7 @@ export const translations = {
           title: "KGDCL ERP System",
           client: "Karnaphuli Gas Distribution Company Ltd.",
           url: "https://erp.kgdcl.gov.bd/",
-          categories: ["ERP", "Backend", "Database", "Reporting", "Web"],
+          categories: ["ERP", "Grails", "Database", "Reporting"],
           scope: "Enterprise ERP platform for Karnaphuli Gas Distribution Company Ltd., supporting customer administration, billing-related service workflows, legal-case management, operational reporting, notifications, and day-to-day production support.",
           contributions: [
             "Develop and enhance customer-service workflows including billing activities, disconnection, reconnection, load changes, customer-type changes, and related utility operations.",
@@ -217,7 +244,7 @@ export const translations = {
           title: "KGDCL Billing Portal",
           client: "Karnaphuli Gas Distribution Company Ltd.",
           url: "https://billing.kgdcl.gov.bd/",
-          categories: ["Backend", "Database", "Web"],
+          categories: ["Java", "Spring Boot", "Database"],
           scope: "Web-based billing portal that provides KGDCL customers with access to billing information and supports related online service operations.",
           contributions: [
             "Develop and maintain Spring Boot components that connect portal workflows with billing data stored in Oracle Database.",
@@ -232,7 +259,7 @@ export const translations = {
           title: "SGCL ERP System",
           client: "Sundarban Gas Company Limited",
           url: "https://erp.sgcl.org.bd/",
-          categories: ["ERP", "Backend", "Database", "Reporting", "Web"],
+          categories: ["ERP", "Java", "Spring Boot", "Database", "Reporting"],
           scope: "Enterprise ERP platform for Sundarban Gas Company Limited, supporting customer and operational processes, reporting, and ongoing application support.",
           contributions: [
             "Develop backend services and business functionality with Spring Boot and expose REST APIs for integration with the Angular frontend.",
@@ -247,7 +274,7 @@ export const translations = {
           title: "BGDCL ERP System",
           client: "Bakhrabad Gas Distribution Company Ltd.",
           url: null,
-          categories: ["ERP", "Backend", "Database", "Reporting", "Web"],
+          categories: ["ERP", "Grails", "Database", "Reporting"],
           scope: "ERP implementation and continuing application support for Bakhrabad Gas Distribution Company Ltd., adapting shared gas-utility processes to organization-specific operational and reporting requirements.",
           contributions: [
             "Develop and maintain customer, service, and operational functionality using the existing Grails-based ERP architecture.",
@@ -262,7 +289,7 @@ export const translations = {
           title: "Bizzness Roots 2.0",
           client: "The Databiz Software Limited (Commercial Clients)",
           url: null,
-          categories: ["ERP", "Backend", "Database", "Reporting"],
+          categories: ["ERP", "Database", "Reporting"],
           scope: "Commercial ERP solution supporting sales, purchase, VAT, reporting, and client-specific business processes for multiple organizations.",
           contributions: [
             "Developed sales, purchase, VAT, and related ERP features according to client requirements and the application’s existing .NET architecture.",
@@ -369,8 +396,7 @@ export const translations = {
         role: "Undergraduate Thesis / Research",
         institution: "International Islamic University Chittagong",
         points: [
-          "Studied machine-learning approaches for predicting future customer churn.",
-          "Designed a predictive-system concept to identify customers with a higher likelihood of churn and support proactive retention decisions."
+          "Studied machine-learning approaches for predicting customer churn and developed a predictive-system concept for identifying customers with a higher likelihood of churn."
         ]
       },
       certifications: [
@@ -390,6 +416,7 @@ export const translations = {
         supervisor: "Dr. Jamshed Alam Patwary, Assistant Professor",
         keySubjects: ["Technical Writing and Presentation", "Mathematical Analysis", "Computer Science"],
         highlights: [
+          "Supported academic assessment, laboratory sessions, practical coursework, and student presentations.",
           "Evaluated examination papers and supported academic assessment activities.",
           "Assisted students during laboratory sessions and helped facilitate practical coursework.",
           "Supervised student presentations during laboratory examinations."
@@ -474,6 +501,32 @@ export const translations = {
       badgeExperience: "৪.৫+ বছর অভিজ্ঞতা",
       badgeDatabase: "Oracle 11g & PL/SQL",
       badgeOrganizations: "২টি প্রতিষ্ঠান",
+    },
+    quickTech: {
+      eyebrow: "এক নজরে",
+      title: "মূল প্রযুক্তি প্রোফাইল",
+      categories: [
+        {
+          id: "backend",
+          name: "BACKEND",
+          skills: ["Java", "Spring Boot", "Spring MVC", "Grails"]
+        },
+        {
+          id: "database",
+          name: "DATABASE",
+          skills: ["Oracle", "PL/SQL", "SQL Server", "T-SQL"]
+        },
+        {
+          id: "enterprise",
+          name: "ENTERPRISE",
+          skills: ["ERP", "Utility Billing", "Customer Management"]
+        },
+        {
+          id: "reporting",
+          name: "REPORTING",
+          skills: ["Jasper Reports", "Jasper Studio", "iReport", "Crystal Reports"]
+        }
+      ]
     },
     snapshot: {
       title: "পেশাগত সারসংক্ষেপ",
@@ -601,16 +654,17 @@ export const translations = {
       title: "বাস্তবায়িত এন্টারপ্রাইজ সিস্টেম",
       subtitle: "রাষ্ট্রীয় ইউটিলিটি এবং বাণিজ্যিক প্রতিষ্ঠানের জন্য বাস্তবায়িত গুরুত্বপূর্ণ প্রোডাকশন প্ল্যাটফর্ম",
       filterAll: "সব",
+      filterJava: "Java",
+      filterSpringBoot: "Spring Boot",
+      filterGrails: "Grails",
       filterErp: "ERP",
-      filterBackend: "Backend",
       filterDatabase: "Database",
       filterReporting: "Reporting",
-      filterWeb: "Web",
       clientLabel: "গ্রাহক / প্রতিষ্ঠান",
       scopeLabel: "সিস্টেমের পরিধি",
       techLabel: "ব্যবহৃত প্রযুক্তি",
       contributionsLabel: "মূল ইঞ্জিনিয়ারিং অবদান",
-      viewLive: "সরাসরি সিস্টেমে যান",
+      viewLive: "সরাসরি প্রজেক্ট দেখুন",
       productionActive: "সক্রিয় প্রোডাকশন সিস্টেম",
       internalSystem: "অভ্যন্তরীণ প্রাতিষ্ঠানিক সিস্টেম",
       archTitle: "কনসেপচুয়াল আর্কিটেকচার প্রবাহ",
@@ -623,7 +677,7 @@ export const translations = {
           title: "KGDCL ERP System",
           client: "Karnaphuli Gas Distribution Company Ltd.",
           url: "https://erp.kgdcl.gov.bd/",
-          categories: ["ERP", "Backend", "Database", "Reporting", "Web"],
+          categories: ["ERP", "Grails", "Database", "Reporting"],
           scope: "Karnaphuli Gas Distribution Company Ltd.-এর জন্য এন্টারপ্রাইজ ERP প্ল্যাটফর্ম, যা গ্রাহক সেবা, বিলিং কার্যক্রম, আইনি মামলা পরিচালনা, অপারেশনাল রিপোর্টিং ও নোটিফিকেশন সমর্থন করে।",
           contributions: [
             "বিলিং কার্যক্রম, লাইন কর্তন, পুনঃসংযোগ, লোড পরিবর্তন ও গ্রাহক শ্রেণি পরিবর্তনের মতো গুরুত্বপূর্ণ ইউটিলিটি অপারেশন ফিচার উন্নয়ন।",
@@ -639,7 +693,7 @@ export const translations = {
           title: "KGDCL Billing Portal",
           client: "Karnaphuli Gas Distribution Company Ltd.",
           url: "https://billing.kgdcl.gov.bd/",
-          categories: ["Backend", "Database", "Web"],
+          categories: ["Java", "Spring Boot", "Database"],
           scope: "ওয়েব-ভিত্তিক বিলিং পোর্টাল যার মাধ্যমে KGDCL গ্রাহকগণ নিজেদের বিল সংক্রান্ত তথ্য দেখতে ও অনলাইন সেবা সংক্রান্ত কার্যক্রম সম্পন্ন করতে পারেন।",
           contributions: [
             "Oracle ডাটাবেসের সাথে সংযুক্ত করে Spring Boot দিয়ে বিলিং পোর্টালের ব্যাকএন্ড সেবা তৈরি ও পরিচালনা।",
@@ -654,7 +708,7 @@ export const translations = {
           title: "SGCL ERP System",
           client: "Sundarban Gas Company Limited",
           url: "https://erp.sgcl.org.bd/",
-          categories: ["ERP", "Backend", "Database", "Reporting", "Web"],
+          categories: ["ERP", "Java", "Spring Boot", "Database", "Reporting"],
           scope: "Sundarban Gas Company Limited-এর গ্রাহক ও অপারেশনাল ব্যবস্থাপনা এবং রিপোর্টিং সংক্রান্ত এন্টারপ্রাইজ ERP প্ল্যাটফর্ম।",
           contributions: [
             "Spring Boot দিয়ে ব্যাকএন্ড সার্ভিস তৈরি এবং Angular ফ্রন্টএন্ডের জন্য প্রয়োজনীয় REST API সরবরাহ।",
@@ -669,7 +723,7 @@ export const translations = {
           title: "BGDCL ERP System",
           client: "Bakhrabad Gas Distribution Company Ltd.",
           url: null,
-          categories: ["ERP", "Backend", "Database", "Reporting", "Web"],
+          categories: ["ERP", "Grails", "Database", "Reporting"],
           scope: "Bakhrabad Gas Distribution Company Ltd.-এর জন্য গ্যাস ইউটিলিটি প্রক্রিয়ার এন্টারপ্রাইজ ERP বাস্তবায়ন ও অব্যাহত সহায়তা।",
           contributions: [
             "Grails আর্কিটেকচার ব্যবহার করে গ্রাহক সেবা ও অপারেশনাল ফিচার উন্নয়ন ও রক্ষণাবেক্ষণ।",
@@ -684,7 +738,7 @@ export const translations = {
           title: "Bizzness Roots 2.0",
           client: "The Databiz Software Limited (Commercial Clients)",
           url: null,
-          categories: ["ERP", "Backend", "Database", "Reporting"],
+          categories: ["ERP", "Database", "Reporting"],
           scope: "বিভিন্ন প্রতিষ্ঠানের বিক্রয়, ক্রয়, ভ্যাট ও প্রাতিষ্ঠানিক রিপোর্টিং সমর্থনকারী বাণিজ্যিক ERP প্ল্যাটফর্ম।",
           contributions: [
             ".NET আর্কিটেকচারে ক্লায়েন্টের চাহিদা অনুযায়ী বিক্রয়, ক্রয় ও ভ্যাট সংক্রান্ত ফিচার তৈরি।",
@@ -812,6 +866,7 @@ export const translations = {
         supervisor: "Dr. Jamshed Alam Patwary, Assistant Professor",
         keySubjects: ["Technical Writing and Presentation", "Mathematical Analysis", "Computer Science"],
         highlights: [
+          "একাডেমিক মূল্যায়ন, ল্যাব সেশন, ব্যবহারিক কোর্সওয়ার্ক এবং শিক্ষার্থীদের উপস্থাপনায় সহায়তা প্রদান।",
           "পরীক্ষার খাতা মূল্যায়ন এবং একাডেমিক মূল্যায়নে সহায়তা প্রদান।",
           "ল্যাব সেশনে শিক্ষার্থীদের ব্যবহারিক কাজ পরিচালনায় প্রত্যক্ষ সহায়তা।",
           "ল্যাব পরীক্ষায় শিক্ষার্থীদের উপস্থাপনা ও কাজ তদারকি।"

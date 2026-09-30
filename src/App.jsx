@@ -7,6 +7,7 @@ import Sidebar from './components/sidebar/Sidebar';
 import Navbar from './components/common/Navbar';
 import MobileBottomNav from './components/common/MobileBottomNav';
 import Hero from './components/hero/Hero';
+import QuickTechOverview from './components/overview/QuickTechOverview';
 import AboutSection from './components/about/AboutSection';
 import DomainSection from './components/domain/DomainSection';
 import ExperienceSection from './components/experience/ExperienceSection';
@@ -144,6 +145,7 @@ function PortfolioContent() {
         {/* Main Content Sections */}
         <main className="flex-grow w-full max-w-full pb-16 md:pb-0">
           <Hero />
+          <QuickTechOverview />
           <AboutSection />
           <DomainSection />
           <ExperienceSection />

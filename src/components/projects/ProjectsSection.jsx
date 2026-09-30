@@ -10,11 +10,12 @@ export default function ProjectsSection() {
 
   const filterTabs = [
     { key: 'All', label: t.projects.filterAll },
+    { key: 'Java', label: t.projects.filterJava || 'Java' },
+    { key: 'Spring Boot', label: t.projects.filterSpringBoot || 'Spring Boot' },
+    { key: 'Grails', label: t.projects.filterGrails || 'Grails' },
     { key: 'ERP', label: t.projects.filterErp },
-    { key: 'Backend', label: t.projects.filterBackend },
     { key: 'Database', label: t.projects.filterDatabase },
     { key: 'Reporting', label: t.projects.filterReporting },
-    { key: 'Web', label: t.projects.filterWeb },
   ];
 
   const toggleExpand = (id) => {

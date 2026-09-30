@@ -97,7 +97,7 @@ export default function ContactSection() {
               {/* Download CV Button */}
               <a
                 href={personal.resumeUrl}
-                download="S_B_M_Reazul_Karim_CV.pdf"
+                download="SBM_Reazul_Karim_ATS_CV.pdf"
                 className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-lg text-xs sm:text-sm font-medium text-content-primary bg-canvas-subtle hover:bg-card border border-subtle hover:border-brand/40 transition-colors"
               >
                 <FileDown className="w-4 h-4 text-brand" />

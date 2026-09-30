@@ -137,6 +137,11 @@ export default function EducationSection() {
                 <p className="text-[10px] font-mono text-content-muted mt-1">
                   {t.education.ta.keySubjects.join(', ')}
                 </p>
+                {t.education.ta.highlights?.[0] && (
+                  <p className="text-[11px] text-content-secondary mt-2 leading-relaxed border-t border-subtle pt-2">
+                    {t.education.ta.highlights[0]}
+                  </p>
+                )}
               </div>
 
             </div>
