@@ -84,31 +84,8 @@ export default function EducationSection() {
                 {t.education.research.institution}
               </p>
 
-              {/* Minimal Conceptual Data-Science Flow Diagram */}
-              <div className="p-3.5 rounded-lg bg-canvas-subtle border border-subtle mb-4">
-                <div className="flex items-center justify-between font-mono text-[11px] text-content-secondary overflow-x-auto gap-2 py-1">
-                  {t.education.research.steps.map((step, sIdx) => {
-                    const isLast = sIdx === t.education.research.steps.length - 1;
-                    return (
-                      <React.Fragment key={sIdx}>
-                        <span className={`px-2 py-1 rounded border shrink-0 text-center ${
-                          isLast
-                            ? 'bg-brand/10 border-brand/30 text-brand font-semibold'
-                            : 'bg-card border-subtle text-content-primary'
-                        }`}>
-                          {step}
-                        </span>
-                        {!isLast && <span className="text-brand shrink-0">→</span>}
-                      </React.Fragment>
-                    );
-                  })}
-                </div>
-                <span className="block mt-2 text-[10px] font-mono text-content-muted">
-                  * {lang === 'bn' ? "গ্রাহকের Churn পূর্বাভাস বিষয়ে গবেষণাভিত্তিক ধারণাগত কাজের প্রবাহ।" : "Conceptual system workflow studied to predict churn and support proactive retention decisions."}
-                </span>
-              </div>
-
-              <ul className="space-y-2 text-xs text-content-secondary leading-relaxed">
+              {/* Research Points directly grounded in CV */}
+              <ul className="space-y-2.5 text-xs text-content-secondary leading-relaxed pt-2 border-t border-subtle">
                 {t.education.research.points.map((pt, pIdx) => (
                   <li key={pIdx} className="flex items-start gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-brand shrink-0 mt-1.5" />

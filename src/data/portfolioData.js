@@ -18,7 +18,7 @@ export const portfolioData = {
     resumeUrl: `${cleanBase}documents/S_B_M_Reazul_Karim_CV.pdf`,
     image: `${cleanBase}images/Reaz_Image.jpg`,
     summary:
-      "Software Engineer with 4.5+ years of experience developing, enhancing, and supporting enterprise ERP, billing, customer management, VAT, and reporting solutions. Strong hands-on expertise in Java, Spring Boot, Grails, Hibernate/GORM/JPA, Oracle, MS SQL, PL/SQL, Jasper Reports, iReport, and Crystal Reports. Experienced in translating client and regulatory requirements into reliable application features, database objects, reports, and production deployments. Recognized for effective client support, structured problem-solving, and maintaining business-critical systems for utility and commercial organizations."
+      "Software Engineer with 4.5+ years of experience developing, enhancing, and supporting enterprise ERP, billing, customer-management, and reporting applications. Hands-on experience with Java, Spring Boot, Grails, Hibernate/GORM/JPA, Oracle, PL/SQL, Angular, and reporting technologies. Experienced in translating business and regulatory requirements into application features, database logic, reports, and production deployments, with a strong background in utility ERP systems, billing workflows, VAT/NBR-related solutions, database development, reporting, and production support."
   },
 
   stats: [
@@ -38,9 +38,9 @@ export const portfolioData = {
       detail: "Critical national utility systems via IICT, BUET"
     },
     {
-      value: "100%",
-      label: "Production Reliability",
-      detail: "Mission-critical billing, VAT compliance & legal modules"
+      value: "2",
+      label: "Organizations",
+      detail: "IICT, BUET & The Databiz Software Limited"
     }
   ],
 

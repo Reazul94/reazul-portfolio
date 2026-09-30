@@ -43,7 +43,7 @@ export const translations = {
       affiliation: "IICT, BUET",
       tagline: "Java • Spring Boot • Grails • ERP • Oracle • Reporting Solutions",
       summary:
-        "Software Engineer with 4.5+ years of experience engineering, enhancing, and maintaining mission-critical enterprise ERPs, gas utility billing platforms, VAT compliance engines, and financial reporting solutions for major national public utilities and commercial enterprises.",
+        "Software Engineer with 4.5+ years of experience developing, enhancing, and supporting enterprise ERP, billing, customer-management, and reporting applications. Hands-on experience with Java, Spring Boot, Grails, Hibernate/GORM/JPA, Oracle, PL/SQL, Angular, and reporting technologies.",
       viewProjects: "View Enterprise Projects",
       downloadCv: "Download CV",
       viewCv: "View CV",
@@ -51,7 +51,7 @@ export const translations = {
       contactMeta: "Dhaka, Bangladesh • sbmreazul@gmail.com",
       badgeExperience: "4.5+ Years Exp",
       badgeDatabase: "Oracle 11g & PL/SQL",
-      badgeReliability: "100% Production Reliability",
+      badgeOrganizations: "2 Organizations",
     },
     snapshot: {
       title: "Professional Snapshot",
@@ -333,7 +333,7 @@ export const translations = {
       subtitle: "Strong academic foundation in computer science and specialized software engineering training",
       academicTitle: "Academic Qualifications",
       researchTitle: "Undergraduate Research Thesis",
-      certTitle: "Professional Training & Certification",
+      certTitle: "Professional Training",
       taTitle: "Academic Mentorship Experience",
       degrees: [
         {
@@ -371,8 +371,7 @@ export const translations = {
         points: [
           "Studied machine-learning approaches for predicting future customer churn.",
           "Designed a predictive-system concept to identify customers with a higher likelihood of churn and support proactive retention decisions."
-        ],
-        steps: ["Customer Data Extraction", "Behavioral Feature Engineering", "ML Predictive Modeling", "Churn Risk Assessment"]
+        ]
       },
       certifications: [
         {
@@ -466,7 +465,7 @@ export const translations = {
       affiliation: "IICT, BUET",
       tagline: "Java • Spring Boot • Grails • ERP • Oracle • Reporting Solutions",
       summary:
-        "৪.৫+ বছরের অভিজ্ঞতাসম্পন্ন Software Engineer, যিনি জাতীয় পর্যায়ের রাষ্ট্রীয় গ্যাস বিতরণ প্রতিষ্ঠান ও বাণিজ্যিক এন্টারপ্রাইজের জন্য জটিল ERP, ইউটিলিটি বিলিং প্ল্যাটফর্ম, NBR ভ্যাট কমপ্লায়েন্স এবং আর্থিক রিপোর্টিং ব্যবস্থা তৈরি ও পরিচালনা করছেন।",
+        "৪.৫+ বছরের অভিজ্ঞতাসম্পন্ন Software Engineer, যিনি এন্টারপ্রাইজ ERP, ইউটিলিটি বিলিং, গ্রাহক ব্যবস্থাপনা ও রিপোর্টিং অ্যাপ্লিকেশন উন্নয়ন, পরিবর্ধন ও রক্ষণাবেক্ষণে অভিজ্ঞ। Java, Spring Boot, Grails, Hibernate/GORM/JPA, Oracle, PL/SQL, Angular এবং রিপোর্টিং প্রযুক্তিতে বাস্তব কাজের দক্ষতা।",
       viewProjects: "এন্টারপ্রাইজ প্রকল্পসমূহ দেখুন",
       downloadCv: "CV ডাউনলোড",
       viewCv: "CV দেখুন",
@@ -474,7 +473,7 @@ export const translations = {
       contactMeta: "ঢাকা, বাংলাদেশ • sbmreazul@gmail.com",
       badgeExperience: "৪.৫+ বছর অভিজ্ঞতা",
       badgeDatabase: "Oracle 11g & PL/SQL",
-      badgeReliability: "১০০% প্রোডাকশন নির্ভরতা",
+      badgeOrganizations: "২টি প্রতিষ্ঠান",
     },
     snapshot: {
       title: "পেশাগত সারসংক্ষেপ",
@@ -756,7 +755,7 @@ export const translations = {
       subtitle: "কম্পিউটার সায়েন্সের সুদৃঢ় একাডেমিক ভিত্তি এবং এন্টারপ্রাইজ সফটওয়্যার ইঞ্জিনিয়ারিং প্রশিক্ষণ",
       academicTitle: "একাডেমিক ডিগ্রি",
       researchTitle: "স্নাতক গবেষণা থিসিস",
-      certTitle: "পেশাগত প্রশিক্ষণ ও সনদ",
+      certTitle: "পেশাগত প্রশিক্ষণ",
       taTitle: "একাডেমিক শিক্ষকতা অভিজ্ঞতা",
       degrees: [
         {
@@ -792,10 +791,9 @@ export const translations = {
         role: "আন্ডারগ্র্যাজুয়েট থিসিস / গবেষণা",
         institution: "International Islamic University Chittagong",
         points: [
-          "গ্রাহকদের Churn পূর্বানুমান করতে বিভিন্ন মেশিন লার্নিং অ্যালগরিদমের কার্যকারিতা বিশ্লেষণ।",
+          "গ্রাহকদের Churn পূর্বানুমান করতে বিভিন্ন মেশিন লার্নিং পদ্ধতি নিয়ে গবেষণা।",
           "গ্রাহকের ঝুঁকি চিহ্নিত করে ধরে রাখার কৌশল নির্ধারণে একটি প্রেডিক্টিভ সিস্টেমের রূপরেখা তৈরি।"
-        ],
-        steps: ["গ্রাহক ডাটা সংগ্রহ", "আচরণগত বৈশিষ্ট্য বিশ্লেষণ", "মেশিন লার্নিং প্রেডিকশন", "ঝুঁকি মূল্যায়ন"]
+        ]
       },
       certifications: [
         {
